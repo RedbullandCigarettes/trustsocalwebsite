@@ -1,0 +1,564 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* CSS Variables - Linda's Behavioral Health Color Psychology */
+:root {
+    /* Primary Colors - From Trust SoCal Logo */
+    --primary-teal: #2E8B8B;           /* Teal from logo - 60% usage (trust, calm) */
+    --primary-coral: #E67E40;          /* Coral from logo - 10% usage (hope, sparingly) */
+    --accent-sage: #A8C4A2;            /* Soft sage - 30% usage (healing, bridge) */
+
+    /* Legacy support - map to new colors */
+    --primary-navy: #2E8B8B;           /* Maps to teal */
+    --primary-orange: #E67E40;         /* Maps to coral */
+    --light-navy: #3a9d9d;             /* Lighter teal */
+    --light-orange: #f08f55;           /* Lighter coral */
+    --dark-navy: #256b6b;              /* Darker teal */
+
+    /* Neutrals */
+    --cream: #FDFCFA;                  /* Warm white background */
+    --white: #ffffff;
+    --gray-100: #F5F5F5;               /* Soft gray */
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #444444;               /* Deep gray for text */
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    /* Semantic Colors */
+    --success: #87a96b;                /* Sage green for success */
+    --warning: #E67E40;                /* Coral for warmth */
+    --danger: #dc3545;
+    --info: #2E8B8B;                   /* Teal for info */
+    
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+    --shadow-xl: 0 16px 48px rgba(0,0,0,0.25);
+    
+    --border-radius: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-orange), var(--light-orange));
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Crisis Banner - Linda's calming approach (NO RED!) */
+.crisis-banner {
+    background: var(--primary-teal);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    animation: pulse-bg 2s infinite;
+}
+
+@keyframes pulse-bg {
+    0%, 100% { background: var(--primary-teal); }
+    50% { background: #3a9d9d; }
+}
+
+.crisis-banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.crisis-pulse {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.crisis-text {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.crisis-call {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: var(--transition-fast);
+}
+
+.crisis-call:hover {
+    background: white;
+    color: var(--danger);
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: var(--transition-medium);
+    border-bottom: 1px solid var(--gray-200);
+    margin-top: 44px;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-navy);
+    line-height: 1;
+}
+
+.tagline {
+    font-size: 12px;
+    color: var(--primary-orange);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--gray-700);
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.nav a:hover {
+    color: var(--primary-orange);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-orange);
+    transition: var(--transition-fast);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.btn-header-call {
+    background: var(--primary-orange);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-fast);
+}
+
+.btn-header-call:hover {
+    background: var(--light-orange);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--primary-navy);
+    transition: var(--transition-fast);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/hero-sunset.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(29, 39, 88, 0.85) 0%, 
+        rgba(29, 39, 88, 0.7) 50%, 
+        rgba(199, 113, 36, 0.3) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Crisis Side - Linda says NO MORE RED! Use calming sage green */
+.hero-crisis {
+    background: rgba(168, 196, 162, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: var(--border-radius-xl);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-crisis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.crisis-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.hero-crisis h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.crisis-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-crisis {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--primary-teal);
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-crisis:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+.crisis-features {
+    display: grid;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    background: var(--success);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Hope Side */
+.hero-hope {
+    color: white;
+    text-align: left;
+}
+
+.trust-badges {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trust-badge.accredited {
+    background: rgba(199, 113, 36, 0.9);
+}
+
+.hero-hope h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary-orange);
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-orange);
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 16px;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover {
+    background: var(--light-orange);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+

@@ -1,0 +1,194 @@
+{
+  "generated": "2026-01-14T23:21:34.034541",
+  "site_path": "/Users/jeffs/trust website",
+  "total_pages": 89,
+  "summary": {
+    "estimated_technical_score": 60.0,
+    "grade": "C",
+    "top_priority": "Build High-Authority Backlinks",
+    "quick_wins": [
+      "Submit to SAMHSA FindTreatment.gov",
+      "Claim Google Business Profile",
+      "Submit to Recovery.com and Psychology Today",
+      "Add FAQ schema to all service pages"
+    ]
+  },
+  "technical_seo": {
+    "pages_with_title": 89,
+    "pages_without_title": 0,
+    "pages_with_meta_description": 88,
+    "pages_without_meta_description": 1,
+    "pages_with_h1": 87,
+    "pages_without_h1": 2,
+    "pages_with_canonical": 82,
+    "pages_with_video_schema": 0,
+    "pages_with_faq_schema": 0
+  },
+  "content_analysis": {
+    "thin_content_pages": 5,
+    "thin_content_list": [
+      "about-new.html",
+      "404.html",
+      "services-new.html",
+      "tools/python-seo-analyzer/pyseoanalyzer/templates/index.html",
+      "tools/seo-audits-toolkit/admin/public/index.html"
+    ],
+    "strong_content_pages": 6,
+    "pillar_content_pages": 0,
+    "average_word_count": 905.8202247191011
+  },
+  "schema_analysis": {
+    "total_schemas": 0,
+    "unique_schema_types": 0,
+    "schema_distribution": {}
+  },
+  "link_analysis": {
+    "total_internal_links": 1017,
+    "total_external_links": 65,
+    "avg_internal_links_per_page": 11.426966292134832,
+    "pages_with_low_internal_links": 19
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Technical SEO",
+      "issue": "1 pages missing meta descriptions",
+      "impact": "Medium - Affects click-through rates from search results",
+      "action": "Add compelling meta descriptions with target keywords"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Content",
+      "issue": "5 pages have thin content (<300 words)",
+      "impact": "High - Thin content may be considered low quality by Google",
+      "action": "Expand content or consolidate thin pages",
+      "pages": [
+        "about-new.html",
+        "404.html",
+        "services-new.html",
+        "tools/python-seo-analyzer/pyseoanalyzer/templates/index.html",
+        "tools/seo-audits-toolkit/admin/public/index.html"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Schema",
+      "issue": "Limited FAQ schema implementation",
+      "impact": "Medium - FAQ schema can earn featured snippets",
+      "action": "Add FAQ schema to service and treatment pages"
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "Backlinks",
+      "issue": "Need to build high-authority backlinks",
+      "impact": "Very High - Backlinks are the #1 ranking factor",
+      "action": "Submit to directories, create linkable content, pursue PR"
+    }
+  ],
+  "backlink_opportunities": [
+    {
+      "site": "Recovery.com",
+      "da": 70,
+      "type": "Directory",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "Psychology Today",
+      "da": 90,
+      "type": "Directory",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "Rehabs.com",
+      "da": 65,
+      "type": "Directory",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "SAMHSA FindTreatment.gov",
+      "da": 90,
+      "type": "Government",
+      "priority": "CRITICAL",
+      "cost": "Free"
+    },
+    {
+      "site": "Google Business Profile",
+      "da": 100,
+      "type": "Local",
+      "priority": "CRITICAL",
+      "cost": "Free"
+    },
+    {
+      "site": "Yelp",
+      "da": 94,
+      "type": "Directory",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "Healthgrades",
+      "da": 80,
+      "type": "Healthcare",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "Addiction Center",
+      "da": 60,
+      "type": "Directory",
+      "priority": "MEDIUM",
+      "cost": "Free"
+    },
+    {
+      "site": "NAATP",
+      "da": 55,
+      "type": "Association",
+      "priority": "MEDIUM",
+      "cost": "Membership"
+    },
+    {
+      "site": "Apple Maps",
+      "da": 100,
+      "type": "Local",
+      "priority": "HIGH",
+      "cost": "Free"
+    },
+    {
+      "site": "Bing Places",
+      "da": 100,
+      "type": "Local",
+      "priority": "HIGH",
+      "cost": "Free"
+    }
+  ],
+  "competitor_gaps": [
+    {
+      "competitor": "Covenant Hills Treatment",
+      "strength": "Christ-centered 12-step approach, 30+ years established",
+      "gap": "Trust SoCal could emphasize unique treatment philosophies"
+    },
+    {
+      "competitor": "Chapters Capistrano",
+      "strength": "Luxury oceanfront positioning, CARF + Joint Commission",
+      "gap": "Trust SoCal has Joint Commission - consider CARF certification"
+    },
+    {
+      "competitor": "Yellowstone Recovery",
+      "strength": "Nonprofit, \"lowest cost\" messaging, 25+ years",
+      "gap": "Trust SoCal could highlight value/ROI messaging"
+    },
+    {
+      "competitor": "Ocean Hills Recovery",
+      "strength": "Video content strategy, family-focused messaging",
+      "gap": "Trust SoCal has video schema - need actual video content"
+    },
+    {
+      "competitor": "Resurgence Behavioral Health",
+      "strength": "Multiple locations, trauma-informed positioning",
+      "gap": "Trust SoCal has location pages - expand trauma content"
+    }
+  ]
+}

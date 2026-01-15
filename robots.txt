@@ -1,0 +1,25 @@
+# Trust SoCal Robots.txt
+# Updated: January 5, 2026
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trustsocal.com/sitemap.xml
+
+# Block backup files and development files
+Disallow: /*-backup.html
+Disallow: /*-old.html
+Disallow: /*-new.html
+Disallow: /*-test.html
+Disallow: /*.sh
+Disallow: /*.py
+Disallow: /*.md
+Disallow: /*.txt
+Allow: /robots.txt
+
+# Block agent/development directories
+Disallow: /agent/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

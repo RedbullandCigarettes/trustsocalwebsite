@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Image Position</title>
+<link rel="stylesheet" href="css/styles-collaborative.css?v=2">
+<style>
+body { padding: 50px; background: #f5f5f5; }
+.test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+</style>
+</head>
+<body>
+<h1>Image Position Test - About Us</h1>
+<div class="test-grid">
+    <div class="card">
+        <img src="images/residential-interior.jpg" alt="Staircase" style="width: 100%; height: 280px; object-fit: cover; object-position: center 60%;">
+        <div style="padding: 20px;">
+            <h3>Staircase - 60% position</h3>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/facility-kitchen.jpg" alt="Kitchen" style="width: 100%; height: 280px; object-fit: cover; object-position: center 55%;">
+        <div style="padding: 20px;">
+            <h3>Kitchen - 55% position</h3>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/hero-sunset.jpg" alt="Sunset" style="width: 100%; height: 280px; object-fit: cover; object-position: center 50%;">
+        <div style="padding: 20px;">
+            <h3>Sunset - 50% position</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
