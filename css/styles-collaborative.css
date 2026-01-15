@@ -1,5 +1,13 @@
-/* Reset and Base Styles */
-* {
+/* ==========================================================================
+   TRUST SOCAL - ELEVATED DESIGN SYSTEM
+   🔵 BLUE AGENT: Complete visual redesign for distinctive healthcare brand
+   PURPLE AGENT: Performance optimizations for Core Web Vitals (LCP, CLS, FID)
+   ========================================================================== */
+
+/* PURPLE AGENT: Reset with performance-focused inheritance */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,65 +15,94 @@
 
 html {
     scroll-behavior: smooth;
+    /* 🔵 BLUE AGENT: Premium text rendering for crisp typography */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* PURPLE AGENT: optimizeSpeed for better rendering performance on long pages */
+    text-rendering: optimizeSpeed;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    /* 🔵 BLUE AGENT: Replaced generic Inter with Literata - warm, trustworthy serif */
+    font-family: 'Literata', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #2D3748;
     overflow-x: hidden;
-    padding-top: 48px; /* Space for fixed crisis banner */
+    padding-top: 48px;
+    /* 🔵 BLUE AGENT: Warm ivory background - not clinical white */
+    background-color: #FAFAF7;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+    letter-spacing: -0.005em;
+    font-size: 17px;
 }
 
-/* CSS Variables - Linda's Behavioral Health Color Psychology */
+/* 🔵 BLUE AGENT: Refined Color System - Healthcare Trust + Warmth */
 :root {
-    /* Primary Colors - From Trust SoCal Logo */
-    --primary-teal: #2E8B8B;           /* Teal from logo - 60% usage (trust, calm) */
-    --primary-coral: #E67E40;          /* Coral from logo - 10% usage (hope, sparingly) */
-    --accent-sage: #A8C4A2;            /* Soft sage - 30% usage (healing, bridge) */
+    /* 🔵 BLUE AGENT: Primary Colors - Deeper, more authoritative */
+    --primary-teal: #1A6B6B;           /* Deeper ocean teal - trust, stability */
+    --primary-teal-light: #2A8B8B;     /* Lighter variant for hover */
+    --primary-teal-dark: #145454;      /* Rich dark for text/accents */
 
-    /* Legacy support - map to new colors */
-    --primary-navy: #2E8B8B;           /* Maps to teal */
-    --primary-orange: #E67E40;         /* Maps to coral */
-    --light-navy: #3a9d9d;             /* Lighter teal */
-    --light-orange: #f08f55;           /* Lighter coral */
-    --dark-navy: #256b6b;              /* Darker teal */
+    --primary-coral: #C96B42;          /* 🔵 BLUE AGENT: Warmer terracotta - hope, action */
+    --primary-coral-light: #E08960;    /* Softer coral for hover */
+    --primary-coral-dark: #A85735;     /* Deep coral for emphasis */
 
-    /* Neutrals */
-    --cream: #FDFCFA;                  /* Warm white background */
-    --white: #ffffff;
-    --gray-100: #F5F5F5;               /* Soft gray */
-    --gray-200: #e9ecef;
-    --gray-300: #dee2e6;
-    --gray-400: #ced4da;
-    --gray-500: #adb5bd;
-    --gray-600: #6c757d;
-    --gray-700: #444444;               /* Deep gray for text */
-    --gray-800: #343a40;
-    --gray-900: #212529;
+    --accent-sage: #6B9B7A;            /* 🔵 BLUE AGENT: Earthier sage - healing, calm */
+    --accent-gold: #B8956A;            /* Premium gold accent for trust signals */
+    --accent-cream: #F5F0E8;           /* Warm cream for cards */
+
+    /* Legacy support - seamless migration */
+    --primary-navy: #1A6B6B;
+    --primary-orange: #C96B42;
+    --light-navy: #2A8B8B;
+    --light-orange: #E08960;
+    --dark-navy: #145454;
+
+    /* 🔵 BLUE AGENT: Sophisticated Neutral Palette with warm undertones */
+    --cream: #FAF9F6;
+    --ivory: #F5F4EF;
+    --white: #FFFFFF;
+    --gray-50: #F8F7F4;
+    --gray-100: #EFEEEA;
+    --gray-200: #E3E2DC;
+    --gray-300: #D4D3CC;
+    --gray-400: #A9A89F;
+    --gray-500: #7D7C74;
+    --gray-600: #5A5952;
+    --gray-700: #3B3A35;
+    --gray-800: #2A2924;
+    --gray-900: #1A1918;
 
     /* Semantic Colors */
-    --success: #87a96b;                /* Sage green for success */
-    --warning: #E67E40;                /* Coral for warmth */
-    --danger: #dc3545;
-    --info: #2E8B8B;                   /* Teal for info */
-    
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    
-    /* AAC-inspired subtle shadows */
-    --shadow-sm: 0px 2px 8px rgba(0,0,0,0.08);
-    --shadow-md: 0px 5px 20px rgba(0,0,0,0.1);
-    --shadow-lg: 0px 8px 28px rgba(0,0,0,0.15);
-    --shadow-xl: 0px 12px 36px rgba(0,0,0,0.18);
-    
-    --border-radius: 8px;
-    --border-radius-lg: 16px;
-    --border-radius-xl: 24px;
-    
-    --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --success: #5E8B65;
+    --warning: #C96B42;
+    --danger: #B84C4C;
+    --info: #1A6B6B;
+
+    /* 🔵 BLUE AGENT: Distinctive Typography Stack */
+    --font-display: 'Libre Baskerville', 'Playfair Display', Georgia, serif;
+    --font-heading: 'Literata', 'Source Serif 4', Georgia, serif;
+    --font-body: 'Literata', Georgia, 'Times New Roman', serif;
+    --font-accent: 'DM Sans', system-ui, -apple-system, sans-serif;
+
+    /* 🔵 BLUE AGENT: Premium Shadow System - softer, more layered */
+    --shadow-sm: 0 1px 2px rgba(26, 25, 24, 0.04), 0 1px 3px rgba(26, 25, 24, 0.06);
+    --shadow-md: 0 4px 6px rgba(26, 25, 24, 0.04), 0 2px 4px rgba(26, 25, 24, 0.06);
+    --shadow-lg: 0 10px 15px rgba(26, 25, 24, 0.06), 0 4px 6px rgba(26, 25, 24, 0.04);
+    --shadow-xl: 0 20px 25px rgba(26, 25, 24, 0.08), 0 10px 10px rgba(26, 25, 24, 0.04);
+    --shadow-2xl: 0 25px 50px rgba(26, 25, 24, 0.12);
+    /* 🔵 BLUE AGENT: Elevated shadow for premium hover states */
+    --shadow-elevated: 0 20px 40px rgba(26, 107, 107, 0.15), 0 8px 16px rgba(26, 25, 24, 0.08);
+
+    --border-radius: 6px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 20px;
+
+    /* 🔵 BLUE AGENT: Refined easing curves */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-medium: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Utility Classes */
@@ -75,48 +112,48 @@ body {
     padding: 0 20px;
 }
 
+/* 🔵 BLUE AGENT: Refined section badges - no gradient, sophisticated look */
 .section-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-orange), var(--light-orange));
+    /* 🔵 BLUE AGENT: Subtle teal background instead of orange gradient */
+    background: var(--primary-teal);
     color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 3px;
+    font-family: var(--font-accent);
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-}
-
-.section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    color: var(--primary-navy);
+    letter-spacing: 1.5px;
     margin-bottom: 20px;
-    line-height: 1.2;
-    background: linear-gradient(90deg,
-        var(--primary-navy) 0%,
-        var(--primary-teal) 50%,
-        var(--primary-navy) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 8s ease-in-out infinite;
+    /* 🔵 BLUE AGENT: Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(26, 107, 107, 0.2);
 }
 
-@keyframes shimmer {
-    0%, 100% { background-position: 0% center; }
-    50% { background-position: 100% center; }
+/* 🔵 BLUE AGENT: Section titles - solid color, no shimmer animation */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    font-weight: 400;
+    /* 🔵 BLUE AGENT: Solid teal - no gradient animation */
+    color: var(--primary-teal);
+    margin-bottom: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    /* 🔵 BLUE AGENT: Remove shimmer - too "AI-generated" looking */
 }
+
+/* 🔵 BLUE AGENT: Removed shimmer animation - distracting and generic */
 
 .section-subtitle {
-    font-size: 19px;
-    line-height: 1.7;
-    max-width: 720px;
-    margin: 0 auto 40px;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto 48px;
     color: var(--gray-600);
+    /* 🔵 BLUE AGENT: Slightly lighter weight for elegance */
+    font-weight: 400;
 }
 
 .section-header {
@@ -129,14 +166,12 @@ body {
     margin-bottom: 24px;
 }
 
-/* Crisis Banner - LOCKED AT TOP - Always accessible */
+/* 🔵 BLUE AGENT: Crisis Banner - Refined, professional urgency */
 .crisis-banner {
-    background: linear-gradient(135deg,
-        #1a5c5c 0%,
-        #2E8B8B 100%
-    );
+    /* 🔵 BLUE AGENT: Solid deep teal - no gradient */
+    background: #145454;
     color: white;
-    padding: 14px 0;
+    padding: 12px 0;
     text-align: center;
     position: fixed;
     top: 0;
@@ -144,55 +179,40 @@ body {
     right: 0;
     z-index: 10000;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    /* 🔵 BLUE AGENT: Subtle shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Soft breathing animation - living design, not aggressive pulse */
-.crisis-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle,
-        rgba(255,255,255,0.1) 0%,
-        transparent 70%
-    );
-    animation: breathe 4s ease-in-out infinite;
-}
-
-@keyframes breathe {
-    0%, 100% { transform: scale(1); opacity: 0.3; }
-    50% { transform: scale(1.1); opacity: 0.6; }
-}
+/* 🔵 BLUE AGENT: Removed distracting breathing animation */
 
 .crisis-banner .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
 }
 
+/* 🔵 BLUE AGENT: Refined pulse indicator */
 .crisis-pulse {
     width: 8px;
     height: 8px;
-    background: white;
+    background: #E08960;
     border-radius: 50%;
-    animation: pulse 1.5s infinite;
+    animation: pulse 2s ease-in-out infinite;
+    /* 🔵 BLUE AGENT: Coral pulse for warmth contrast */
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
+    50% { opacity: 0.6; transform: scale(1.15); }
 }
 
 .crisis-text {
-    font-weight: 700;
-    font-size: 16px;
+    font-family: var(--font-accent);
+    font-weight: 600;
+    font-size: 14px;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.3px;
     position: relative;
     z-index: 1;
 }
@@ -278,58 +298,66 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* 🔵 BLUE AGENT: Navigation - refined typography */
 .nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 }
 
 .nav a {
     text-decoration: none;
     color: var(--gray-700);
+    /* 🔵 BLUE AGENT: Sans-serif for nav - better legibility */
+    font-family: var(--font-accent);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
     transition: var(--transition-fast);
+    letter-spacing: 0.2px;
 }
 
 .nav a:hover {
-    color: var(--primary-orange);
+    color: var(--primary-teal);
 }
 
+/* 🔵 BLUE AGENT: Refined underline animation */
 .nav a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
     width: 0;
-    height: 2px;
-    background: var(--primary-orange);
-    transition: var(--transition-fast);
+    height: 1.5px;
+    background: var(--primary-teal);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav a:hover::after {
     width: 100%;
 }
 
+/* 🔵 BLUE AGENT: CTA button - coral for action */
 .btn-header-call {
-    background: var(--primary-orange);
+    background: var(--primary-coral);
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: var(--border-radius);
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-family: var(--font-accent);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: var(--transition-fast);
+    letter-spacing: 0.3px;
 }
 
 .btn-header-call:hover {
-    background: var(--light-orange);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    background: var(--primary-coral-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 107, 66, 0.25);
 }
 
 .mobile-menu-toggle {
@@ -346,16 +374,18 @@ body {
     transition: var(--transition-fast);
 }
 
-/* Hero Section - Linda's Artistic Vision: Dawn Breaking Over Ocean */
+/* 🔵 BLUE AGENT: Hero Section - Refined, professional elegance */
 .hero {
     position: relative;
-    min-height: 65vh; /* Research-backed (AAC standard) */
+    min-height: 70vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     padding-top: 120px;
+    padding-bottom: 80px;
 }
 
+/* 🔵 BLUE AGENT: Simplified background - subtle zoom only */
 .hero-background {
     position: absolute;
     top: 0;
@@ -364,37 +394,33 @@ body {
     bottom: 0;
     background-image: url('../images/hero-sunset.jpg');
     background-size: cover;
-    background-position: center 40%; /* Rule of thirds, not centered */
+    background-position: center 40%;
     background-attachment: fixed;
     z-index: -2;
-    animation: slowZoom 30s ease-in-out infinite alternate;
+    /* 🔵 BLUE AGENT: Gentler, slower zoom */
+    animation: heroZoom 45s ease-in-out infinite alternate;
 }
 
-@keyframes slowZoom {
-    0% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.15) rotate(0.5deg); }
-    100% { transform: scale(1) rotate(0deg); }
+@keyframes heroZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
 }
 
-/* Dawn gradient - visual metaphor for recovery journey (darkness → light) */
+/* 🔵 BLUE AGENT: Refined overlay - more sophisticated gradient */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top,
-        rgba(46, 139, 139, 0.75) 0%,      /* Deep ocean teal (struggle, depth) */
-        rgba(135, 206, 235, 0.65) 60%,    /* Sky blue (rising toward freedom) */
-        rgba(255, 127, 102, 0.15) 100%    /* Sunrise coral glow (hope, warmth) */
+    /* 🔵 BLUE AGENT: Deeper, more professional teal gradient */
+    background: linear-gradient(165deg,
+        rgba(20, 84, 84, 0.85) 0%,
+        rgba(26, 107, 107, 0.75) 50%,
+        rgba(42, 139, 139, 0.65) 100%
     );
     z-index: -1;
-    animation: gradientShift 15s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-    0%, 100% { opacity: 0.95; }
-    50% { opacity: 1; }
+    /* 🔵 BLUE AGENT: Removed distracting opacity animation */
 }
 
 /* Sunrise glow removed - was causing layering issues */
@@ -422,63 +448,66 @@ body {
     text-align: left;
 }
 
-/* Crisis Side - BOLD Green sage card with dramatic shadow */
+/* 🔵 BLUE AGENT: Crisis card - warm cream with teal accents */
 .hero-crisis {
-    background: linear-gradient(135deg,
-        rgb(168, 196, 162) 0%,
-        rgb(148, 176, 142) 100%
-    );
-    padding: 40px;
-    border-radius: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    /* 🔵 BLUE AGENT: Cream background - warmer, more inviting */
+    background: #FAF8F5;
+    padding: 36px;
+    border-radius: 12px;
+    /* 🔵 BLUE AGENT: Subtle teal left border accent */
+    border-left: 4px solid var(--accent-sage);
+    color: var(--gray-800);
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
-                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                0 10px 30px rgba(168, 196, 162, 0.4);
+    box-shadow: 0 16px 48px rgba(26, 25, 24, 0.12),
+                0 4px 12px rgba(26, 25, 24, 0.08);
 }
 
-/* Shine animation removed - was causing visual artifacts */
-
+/* 🔵 BLUE AGENT: Refined badge */
 .crisis-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
+    background: var(--accent-sage);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 3px;
+    font-family: var(--font-accent);
+    font-size: 11px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
 
 .pulse-dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background: white;
     border-radius: 50%;
-    animation: pulse 1.5s infinite;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 .hero-crisis h2 {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    line-height: 1.2;
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--primary-teal);
+    margin-bottom: 12px;
+    line-height: 1.25;
     position: relative;
     z-index: 1;
 }
 
 .crisis-subtitle {
-    font-size: 16px;
-    opacity: 0.9;
-    margin-bottom: 25px;
-    line-height: 1.5;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+    line-height: 1.6;
     position: relative;
     z-index: 1;
 }
@@ -501,190 +530,185 @@ body {
     z-index: 1;
 }
 
+/* 🔵 BLUE AGENT: Refined crisis button */
 .btn-crisis:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
+/* 🔵 BLUE AGENT: Refined feature items */
 .crisis-features {
     display: grid;
-    gap: 12px;
+    gap: 10px;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
+    font-family: var(--font-accent);
+    font-size: 13px;
     font-weight: 500;
+    color: var(--gray-700);
 }
 
+/* 🔵 BLUE AGENT: Simpler checkmark */
 .check {
-    width: 20px;
-    height: 20px;
-    background: var(--success);
+    width: 18px;
+    height: 18px;
+    background: var(--accent-sage);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
-/* Hero content - centered and prominent */
+/* 🔵 BLUE AGENT: Hero hope section */
 .hero-hope {
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
+/* 🔵 BLUE AGENT: Refined trust badges */
 .trust-badges {
     display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 28px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
 .trust-badge {
-    background: rgba(255, 255, 255, 0.25);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 13px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-family: var(--font-accent);
+    font-size: 11px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .trust-badge.accredited {
-    background: rgba(199, 113, 36, 0.9);
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
 }
 
-/* Linda's artistic typography - gentle strength, not aggressive */
+/* 🔵 BLUE AGENT: Hero typography - elegant serif */
 .hero-hope h1 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 6vw, 3.75rem); /* Slightly smaller = more intimate */
-    font-weight: 600; /* Strong but not aggressive (was 900) */
-    margin-bottom: 25px;
-    line-height: 1.25; /* Room to breathe (was 1.1) */
-    letter-spacing: -0.02em; /* Subtle tightening creates warmth */
-    text-shadow: 0 2px 20px rgba(0,0,0,0.3); /* Soft glow, not harsh drop */
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    /* 🔵 BLUE AGENT: Subtle shadow only */
+    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
 .hero-subtitle {
-    font-size: 19px;
-    line-height: 1.75;
-    margin-bottom: 40px;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
     opacity: 0.95;
-    max-width: 540px;
+    max-width: 520px;
     font-weight: 400;
 }
 
+/* 🔵 BLUE AGENT: Refined stats */
 .hero-stats {
     display: flex;
-    gap: 30px;
-    margin-bottom: 35px;
+    gap: 36px;
+    margin-bottom: 32px;
 }
 
 .stat-item {
-    text-align: center;
+    text-align: left;
 }
 
 .stat-number {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    font-weight: 900;
-    color: var(--primary-orange);
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
     line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    /* 🔵 BLUE AGENT: No text shadow - cleaner */
 }
 
 .stat-label {
-    font-size: 14px;
+    font-family: var(--font-accent);
+    font-size: 12px;
     font-weight: 500;
-    opacity: 0.9;
-    margin-top: 5px;
+    opacity: 0.8;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
+/* 🔵 BLUE AGENT: Hero actions */
 .hero-actions {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
+/* 🔵 BLUE AGENT: Primary button - clean, no animation */
 .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, var(--primary-orange), var(--light-orange));
+    gap: 8px;
+    /* 🔵 BLUE AGENT: Solid coral - no gradient */
+    background: var(--primary-coral);
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    border-radius: var(--border-radius);
-    font-weight: 700;
-    font-size: 16px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(230, 126, 64, 0.4),
-                0 0 0 0 rgba(230, 126, 64, 0.5);
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: var(--font-accent);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(201, 107, 66, 0.25);
     position: relative;
-    overflow: hidden;
-    animation: gentlePulse 3s ease-in-out infinite;
+    /* 🔵 BLUE AGENT: No distracting pulse animation */
 }
 
-@keyframes gentlePulse {
-    0%, 100% {
-        box-shadow: 0 4px 20px rgba(230, 126, 64, 0.4),
-                    0 0 0 0 rgba(230, 126, 64, 0.5),
-                    0 0 30px rgba(230, 126, 64, 0.3);
-    }
-    50% {
-        box-shadow: 0 4px 24px rgba(230, 126, 64, 0.6),
-                    0 0 0 15px rgba(230, 126, 64, 0),
-                    0 0 50px rgba(230, 126, 64, 0.4);
-    }
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn-primary:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
+/* 🔵 BLUE AGENT: Subtle hover effect */
 .btn-primary:hover {
-    transform: translateY(-6px) scale(1.08);
-    box-shadow: 0 15px 50px rgba(230, 126, 64, 0.6),
-                0 0 0 0 rgba(230, 126, 64, 0),
-                0 0 80px rgba(230, 126, 64, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-    animation: none;
-    filter: brightness(1.1);
+    background: var(--primary-coral-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 107, 66, 0.35);
 }
 
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(201, 107, 66, 0.25);
+}
+
+/* 🔵 BLUE AGENT: Secondary button - refined ghost style */
 .btn-secondary {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    gap: 8px;
+    background: transparent;
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    border-radius: var(--border-radius);
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: var(--font-accent);
     font-weight: 600;
-    font-size: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
     transition: var(--transition-fast);
 }
 
@@ -829,7 +853,127 @@ body {
 /* ====================================
    COMPREHENSIVE MOBILE RESPONSIVE
    Seamless phone experience
+   🔴 RED AGENT: Complete mobile-first redesign
    ==================================== */
+
+/* 🔴 RED AGENT: Mobile Navigation Slide-Out Menu */
+.nav {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 80px 30px 40px;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+        z-index: 9999;
+        gap: 0;
+        align-items: stretch;
+        overflow-y: auto;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav a {
+        padding: 16px 0;
+        font-size: 18px;
+        border-bottom: 1px solid var(--gray-200);
+        min-height: 52px; /* 🔴 RED AGENT: Touch-friendly 52px height */
+        display: flex;
+        align-items: center;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* 🔴 RED AGENT: Mobile menu overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 9998;
+    }
+
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 🔴 RED AGENT: Hamburger animation */
+    .mobile-menu-toggle {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* 🔴 RED AGENT: Click-to-Call Button Styling */
+.click-to-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--light-orange));
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 18px;
+    min-height: 52px; /* Touch-friendly */
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(230, 126, 64, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.click-to-call:hover,
+.click-to-call:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 126, 64, 0.4);
+}
+
+.click-to-call .phone-icon {
+    font-size: 20px;
+}
+
+/* 🔴 RED AGENT: Mobile-optimized phone links */
+a[href^="tel:"] {
+    color: var(--primary-orange);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
 
 @media (max-width: 768px) {
     /* Container padding for mobile */
@@ -1469,4 +1613,907 @@ button:focus-visible {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ==========================================================================
+   🔵 BLUE AGENT: PREMIUM DESIGN ENHANCEMENTS
+   Distinctive micro-interactions and refined aesthetics
+   ========================================================================== */
+
+/* 🔵 BLUE AGENT: Card hover state - elegant lift */
+.service-card,
+.facility-card,
+.testimonial-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+}
+
+/* 🔵 BLUE AGENT: Form inputs - refined styling */
+input, textarea, select {
+    font-family: var(--font-body);
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(26, 107, 107, 0.1);
+}
+
+/* 🔵 BLUE AGENT: Blockquote styling for testimonials */
+blockquote {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--gray-700);
+    position: relative;
+    padding-left: 24px;
+    border-left: 3px solid var(--accent-sage);
+}
+
+/* 🔵 BLUE AGENT: Selection styling */
+::selection {
+    background: rgba(26, 107, 107, 0.15);
+    color: var(--gray-900);
+}
+
+/* 🔵 BLUE AGENT: Scrollbar styling (webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+/* 🔵 BLUE AGENT: Image treatment - subtle rounded corners */
+.facility-card img,
+.service-card img {
+    border-radius: 4px;
+}
+
+/* 🔵 BLUE AGENT: Footer link styling */
+.footer a {
+    color: var(--gray-400);
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* 🔵 BLUE AGENT: Badge refinements */
+.accreditation-badge {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* 🔵 BLUE AGENT: Refined CTA section */
+.cta-section {
+    background: var(--primary-teal);
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-family: var(--font-display);
+    color: white;
+    font-weight: 400;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-body);
+}
+
+/* 🔵 BLUE AGENT: Print styles */
+@media print {
+    .crisis-banner,
+    .header,
+    .cta-section {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: black;
+        background: white;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+/* ============================================
+   🔴 RED AGENT: ENHANCED MOBILE RESPONSIVE
+   Complete mobile-first optimization for 60%+ mobile traffic
+   ============================================ */
+
+/* 🔴 RED AGENT: Additional Breakpoint - Small phones (320px) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero-hope h1 {
+        font-size: 1.35rem !important;
+        line-height: 1.25;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .trust-badge {
+        font-size: 10px;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .btn-primary, .btn-secondary, .btn-crisis {
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .crisis-banner .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .crisis-text {
+        font-size: 12px;
+    }
+}
+
+/* 🔴 RED AGENT: Medium-small phones (480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero-hope h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .hero-stats {
+        gap: 15px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .service-card {
+        margin: 0 -5px;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 14px;
+    }
+}
+
+/* 🔴 RED AGENT: Phablets (481px - 576px) */
+@media (min-width: 481px) and (max-width: 576px) {
+    .hero-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero-crisis {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* 🔴 RED AGENT: Touch Target Optimization */
+@media (max-width: 768px) {
+    /* Ensure ALL interactive elements meet 44x44px minimum */
+    a, button, input[type="submit"], input[type="button"],
+    .btn-primary, .btn-secondary, .btn-crisis,
+    .btn-service-primary, .btn-service-secondary,
+    .btn-cta-primary, .btn-cta-secondary,
+    .mobile-menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Links in navigation and lists */
+    .footer-links a,
+    .footer-section ul li a {
+        display: block;
+        padding: 12px 0;
+        min-height: 44px;
+    }
+
+    /* Form inputs - larger touch targets */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"],
+    select,
+    textarea {
+        min-height: 48px;
+        padding: 14px 16px;
+        font-size: 16px !important; /* Prevents iOS zoom */
+        border-radius: 8px;
+        border: 2px solid var(--gray-300);
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: var(--primary-teal);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(46, 139, 139, 0.2);
+    }
+
+    /* Larger checkboxes and radios */
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    /* Select dropdown arrow fix */
+    select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 40px;
+    }
+}
+
+/* 🔴 RED AGENT: Mobile Typography for Readability */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.35;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* Better spacing for mobile reading */
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Testimonial quotes readable */
+    blockquote {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+/* 🔴 RED AGENT: Mobile Sticky Call Button */
+.mobile-sticky-call {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-call {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, var(--primary-orange), var(--light-orange));
+        color: white;
+        text-decoration: none;
+        padding: 16px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 18px;
+        z-index: 9000;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        min-height: 60px;
+        text-align: center;
+    }
+
+    .mobile-sticky-call:active {
+        background: var(--primary-orange);
+        transform: scale(0.98);
+    }
+
+    .mobile-sticky-call .call-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .mobile-sticky-call .call-subtext {
+        font-size: 12px;
+        font-weight: 400;
+        opacity: 0.9;
+    }
+
+    /* Add bottom padding to body for sticky button */
+    body {
+        padding-bottom: 60px;
+    }
+
+    /* Ensure footer has bottom margin for sticky button */
+    .footer {
+        padding-bottom: 80px;
+    }
+}
+
+/* 🔴 RED AGENT: Insurance Grid Mobile Optimization */
+@media (max-width: 768px) {
+    /* Insurance provider cards - 2 columns on mobile */
+    [style*="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Insurance cards smaller padding */
+    [style*="padding: 30px 20px"][style*="border-radius: 12px"] {
+        padding: 20px 15px !important;
+    }
+
+    /* Insurance logos smaller */
+    [style*="height: 50px"][style*="object-fit: contain"] {
+        height: 35px !important;
+    }
+}
+
+/* 🔴 RED AGENT: Hero Section Mobile Optimization */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+    }
+
+    .hero-background {
+        background-attachment: scroll; /* Fix iOS background-attachment: fixed bug */
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-stats .stat-item {
+        flex: 0 0 calc(33% - 15px);
+        min-width: 80px;
+    }
+
+    /* Crisis card mobile improvements */
+    .hero-crisis {
+        order: -1; /* Move crisis card above content on mobile */
+        margin-bottom: 30px;
+    }
+}
+
+/* 🔴 RED AGENT: Service Cards Mobile */
+@media (max-width: 768px) {
+    .service-card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .service-card .service-image img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-features {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .service-features li {
+        padding: 8px 0;
+        padding-left: 24px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .service-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary-teal);
+        font-weight: bold;
+    }
+
+    .service-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-service-primary,
+    .btn-service-secondary {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+    }
+}
+
+/* 🔴 RED AGENT: Footer Mobile Layout */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-section ul li:last-child {
+        border-bottom: none;
+    }
+
+    .footer-phone {
+        font-size: 24px;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+}
+
+/* 🔴 RED AGENT: Medical Review Box Mobile */
+@media (max-width: 768px) {
+    .medical-review-box,
+    [style*="display: flex"][style*="align-items: flex-start"][style*="gap: 1.5rem"] {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .medical-review-box img,
+    [style*="width: 80px"][style*="border-radius: 50%"] {
+        margin: 0 auto 15px !important;
+    }
+}
+
+/* 🔴 RED AGENT: Landscape Phone Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .hero-crisis {
+        order: 0;
+    }
+}
+
+/* 🔴 RED AGENT: Safe Area Insets for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .mobile-sticky-call {
+        padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    }
+
+    body {
+        padding-bottom: calc(60px + env(safe-area-inset-bottom));
+    }
+}
+
+/* 🔴 RED AGENT: High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+    .btn-primary, .btn-crisis, .click-to-call {
+        border: 2px solid white;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ============================================
+   🟠 ORANGE AGENT: WCAG 2.1 AA ACCESSIBILITY
+   Critical for healthcare users - may be in crisis
+   ============================================ */
+
+/* 🟠 ORANGE AGENT: Skip Navigation Link - Essential for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-teal);
+    color: white;
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    z-index: 100001;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--primary-coral);
+    outline-offset: 2px;
+}
+
+/* 🟠 ORANGE AGENT: Enhanced Focus States - WCAG 2.4.7 */
+*:focus-visible {
+    outline: 3px solid var(--primary-coral) !important;
+    outline-offset: 3px !important;
+    border-radius: 4px;
+}
+
+/* 🟠 ORANGE AGENT: Form Focus States - Critical for insurance form */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary-teal) !important;
+    outline-offset: 2px !important;
+    border-color: var(--primary-teal) !important;
+    box-shadow: 0 0 0 4px rgba(46, 139, 139, 0.2) !important;
+}
+
+/* 🟠 ORANGE AGENT: Button Focus States */
+button:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-crisis:focus-visible,
+.btn-cta-primary:focus-visible,
+.btn-cta-secondary:focus-visible {
+    outline: 3px solid white !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 6px var(--primary-teal), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 🟠 ORANGE AGENT: Navigation Link Focus */
+.nav a:focus-visible {
+    outline: 3px solid var(--primary-coral) !important;
+    outline-offset: 4px !important;
+    background: rgba(46, 139, 139, 0.1);
+    border-radius: 4px;
+}
+
+/* 🟠 ORANGE AGENT: Screen Reader Only Class */
+.sr-only,
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* 🟠 ORANGE AGENT: Form Error States - Healthcare critical */
+.form-error {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+
+.form-error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-error-message::before {
+    content: "⚠";
+}
+
+/* 🟠 ORANGE AGENT: Form Success States */
+.form-success {
+    border-color: var(--success) !important;
+    background-color: #f0fff4 !important;
+}
+
+/* 🟠 ORANGE AGENT: Crisis Features List Styling (for semantic ul/li) */
+.crisis-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.crisis-features .feature-item {
+    list-style: none;
+}
+
+/* 🟠 ORANGE AGENT: Improved Color Contrast - WCAG AA 4.5:1 */
+.section-subtitle,
+.service-meta span,
+.testimonial-program {
+    color: #595959; /* Darkened from #6c757d for better contrast */
+}
+
+/* 🟠 ORANGE AGENT: Link contrast in footer */
+.footer a {
+    color: #c0c0c0;
+}
+
+.footer a:hover,
+.footer a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* 🟠 ORANGE AGENT: Crisis Banner Link Visibility */
+.crisis-banner a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.crisis-banner a:hover,
+.crisis-banner a:focus {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 🟠 ORANGE AGENT: Mobile Menu Toggle Accessibility */
+.mobile-menu-toggle {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.mobile-menu-toggle:focus-visible {
+    outline: 3px solid var(--primary-coral) !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
+    background: rgba(46, 139, 139, 0.1);
+}
+
+/* 🟠 ORANGE AGENT: Focus indicator for phone links - critical for crisis */
+a[href^="tel"]:focus-visible {
+    outline: 3px solid var(--primary-coral) !important;
+    outline-offset: 4px !important;
+    background: rgba(230, 126, 64, 0.1);
+    border-radius: 4px;
+}
+
+/* 🟠 ORANGE AGENT: Improve readability - larger line height */
+p, li {
+    line-height: 1.7;
+}
+
+/* 🟠 ORANGE AGENT: Print Styles for Accessibility */
+@media print {
+    .skip-link,
+    .crisis-banner,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    a[href^="tel"]::after {
+        content: " (" attr(href) ")";
+    }
+
+    a[href^="mailto"]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* 🟠 ORANGE AGENT: Forced Colors Mode (Windows High Contrast) */
+@media (forced-colors: active) {
+    .btn-primary,
+    .btn-crisis,
+    .btn-cta-primary {
+        border: 2px solid currentColor;
+    }
+
+    .crisis-pulse,
+    .pulse-dot {
+        forced-color-adjust: none;
+    }
+}
+
+/* ==========================================================================
+   PURPLE AGENT: Core Web Vitals Performance Optimizations
+   ========================================================================== */
+
+/* PURPLE AGENT: CLS Prevention - Reserve space for images before they load */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PURPLE AGENT: Smooth lazy-load transition without layout shift */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded,
+img.loaded {
+    opacity: 1;
+}
+
+/* PURPLE AGENT: Prevent CLS from lazy images - maintain space with background */
+.service-image img,
+.facility-card img {
+    background-color: var(--gray-100, #f5f5f5);
+}
+
+/* PURPLE AGENT: GPU acceleration for animated elements - improves FID */
+.hero-background,
+.hero-overlay,
+.btn-primary,
+.btn-secondary,
+.btn-crisis,
+.header {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* PURPLE AGENT: Contain paint for performance isolation */
+.service-card,
+.facility-card,
+.testimonial-card {
+    contain: layout style paint;
+}
+
+/* PURPLE AGENT: Reduce motion for accessibility and battery savings */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero-background {
+        animation: none !important;
+    }
+
+    img[loading="lazy"] {
+        transition: none;
+        opacity: 1;
+    }
+}
+
+/* PURPLE AGENT: Content-visibility for below-fold sections - improves initial paint */
+.testimonials,
+.cta-section,
+.contact,
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* PURPLE AGENT: Font-display swap fallback in case Google Fonts fail to load */
+@font-face {
+    font-family: 'Inter-Fallback';
+    src: local('Arial');
+    font-display: swap;
+    size-adjust: 107%;
+    ascent-override: 90%;
+    descent-override: 22%;
+    line-gap-override: 0%;
 }

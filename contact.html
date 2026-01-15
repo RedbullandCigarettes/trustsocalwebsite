@@ -58,82 +58,93 @@
     </script>
 </head>
 <body>
-<div class="crisis-banner">
+<!-- 🟠 ORANGE AGENT: Skip navigation link for keyboard users -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- 🟠 ORANGE AGENT: Crisis banner with ARIA live region for screen readers -->
+<div class="crisis-banner" role="alert" aria-live="polite">
 <div class="container">
-<span class="crisis-pulse"></span>
-<span class="crisis-text">24/7 Crisis Support Available: (555) 123-4567</span>
+<span class="crisis-pulse" aria-hidden="true"></span>
+<span class="crisis-text">24/7 Crisis Support Available: <a href="tel:555-123-4567" aria-label="Call 24/7 crisis support at 555-123-4567">(555) 123-4567</a></span>
 </div>
 </div>
-<header class="header">
+<!-- 🟠 ORANGE AGENT: Added role="banner" for header landmark -->
+<header class="header" role="banner">
 <div class="container">
 <div class="header-content">
 <div class="logo">
-<a aria-label="Trust SoCal - Home" href="index.html">
-<img alt="Trust SoCal Logo" class="logo-img" height="50" src="images/logo.png" width="50"/>
+<a aria-label="Trust SoCal - Return to homepage" href="index.html">
+<img alt="Trust SoCal Logo - Joint Commission Accredited Drug and Alcohol Rehabilitation Center" class="logo-img" height="50" src="images/logo.png" width="50"/>
 <div class="logo-text">
 <span class="logo-title">Trust SoCal</span>
 <p class="tagline">Joint Commission Accredited Recovery Center</p>
 </div>
 </a>
 </div>
-<nav class="nav">
+<!-- 🟠 ORANGE AGENT: Added role and aria-label for main navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
 <a href="index.html">Home</a>
 <a href="services.html">Treatment Programs</a>
 <a href="about.html">About Us</a>
 <a href="locations.html">Locations</a>
 <a href="insurance.html">Insurance</a>
 <a href="success-stories.html">Success Stories</a>
-<a href="contact.html">Contact</a>
+<a href="contact.html" aria-current="page">Contact</a>
 </nav>
-<div class="mobile-menu-toggle">
-<span></span>
-<span></span>
-<span></span>
-</div>
+<!-- 🟠 ORANGE AGENT: Mobile menu toggle with ARIA labels -->
+<button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
 </div>
 </div>
 </header>
-<section class="hero">
-<div class="hero-background"></div>
-<div class="hero-overlay"></div>
+<!-- 🟠 ORANGE AGENT: Added main landmark with id for skip link -->
+<main id="main-content" role="main">
+<section class="hero" aria-labelledby="contact-heading">
+<div class="hero-background" aria-hidden="true"></div>
+<div class="hero-overlay" aria-hidden="true"></div>
 <div class="container">
 <div class="hero-content">
 <div class="hero-hope">
-<div class="trust-badges">
-<span class="trust-badge accredited">🏆 Joint Commission Accredited</span>
-<span class="trust-badge experience">⭐ 15+ Years</span>
-<span class="trust-badge insurance">💳 Most Insurance</span>
+<!-- 🟠 ORANGE AGENT: Added aria-hidden to decorative emojis -->
+<div class="trust-badges" role="list" aria-label="Trust credentials">
+<span class="trust-badge accredited" role="listitem"><span aria-hidden="true">🏆</span> Joint Commission Accredited</span>
+<span class="trust-badge experience" role="listitem"><span aria-hidden="true">⭐</span> 15+ Years</span>
+<span class="trust-badge insurance" role="listitem"><span aria-hidden="true">💳</span> Most Insurance</span>
 </div>
-<h1>We're Here to Help 24/7</h1>
+<h1 id="contact-heading">We're Here to Help 24/7</h1>
 <p class="hero-subtitle">Taking the first step toward recovery can feel overwhelming, but you don't have to do it alone. Our compassionate admissions team is available 24 hours a day, 7 days a week to answer your questions, verify insurance, and help you get started on your recovery journey today.</p>
 <div class="hero-actions">
-<a class="btn-primary" href="tel:555-123-4567">
+<a class="btn-primary" href="tel:555-123-4567" aria-label="Call now at 555-123-4567">
 <span>Call Now: (555) 123-4567</span>
-<span class="btn-arrow">→</span>
+<span class="btn-arrow" aria-hidden="true">→</span>
 </a>
-<a class="btn-secondary" href="#contact-form">
+<a class="btn-secondary" href="#contact-form" aria-label="Jump to contact form to send a message">
 <span>Send Message</span>
 </a>
 </div>
 </div>
-<div class="hero-crisis">
+<!-- 🟠 ORANGE AGENT: Crisis card with semantic aside and ARIA -->
+<aside class="hero-crisis" role="complementary" aria-labelledby="crisis-card-heading">
 <div class="crisis-badge">
-<span class="pulse-dot"></span>
+<span class="pulse-dot" aria-hidden="true"></span>
                         Available Now
                     </div>
-<h2>Need Help Today?</h2>
+<h2 id="crisis-card-heading">Need Help Today?</h2>
 <p class="crisis-subtitle">Same-day admission available</p>
-<a class="btn-crisis" href="tel:555-123-4567">
-<span>📞</span>
+<a class="btn-crisis" href="tel:555-123-4567" aria-label="Call now for immediate help at 555-123-4567">
+<span aria-hidden="true">📞</span>
                         Call Now: (555) 123-4567
                     </a>
-<div class="crisis-features">
-<div class="feature-item"><span class="check">✓</span>24/7 Admissions</div>
-<div class="feature-item"><span class="check">✓</span>Insurance Accepted</div>
-<div class="feature-item"><span class="check">✓</span>Confidential Care</div>
-<div class="feature-item"><span class="check">✓</span>Expert Medical Team</div>
-</div>
-</div>
+<ul class="crisis-features" aria-label="What we offer">
+<li class="feature-item"><span class="check" aria-hidden="true">✓</span>24/7 Admissions</li>
+<li class="feature-item"><span class="check" aria-hidden="true">✓</span>Insurance Accepted</li>
+<li class="feature-item"><span class="check" aria-hidden="true">✓</span>Confidential Care</li>
+<li class="feature-item"><span class="check" aria-hidden="true">✓</span>Expert Medical Team</li>
+</ul>
+</aside>
 </div>
 </div>
 </section>
@@ -184,27 +195,30 @@
 </div>
 </div>
 </section>
-<section id="contact-form" style="padding: 80px 0; background: var(--cream);">
+<!-- 🟠 ORANGE AGENT: Enhanced form accessibility with ARIA labels and autocomplete -->
+<section id="contact-form" style="padding: 80px 0; background: var(--cream);" aria-labelledby="form-heading">
 <div class="container">
 <div class="section-header">
 <div class="section-badge">Get in Touch</div>
-<h2 class="section-title">Send Us a Message</h2>
+<h2 class="section-title" id="form-heading">Send Us a Message</h2>
 <p class="section-subtitle">Fill out the form below and one of our admissions specialists will contact you within 2 hours. All inquiries are completely confidential.</p>
 </div>
 <div style="max-width: 700px; margin: 40px auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
 <!-- CLIENT: Replace with actual form processor -->
-<form action="#" method="post" style="display: flex; flex-direction: column; gap: 20px;">
+<!-- 🟠 ORANGE AGENT: Added aria-describedby for form instructions -->
+<form action="#" method="post" style="display: flex; flex-direction: column; gap: 20px;" aria-describedby="form-instructions" novalidate>
+<p id="form-instructions" class="sr-only">Required fields are marked with an asterisk. We will respond within 2 hours.</p>
 <div>
-<label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Full Name *</label>
-<input id="name" name="name" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="text"/>
+<label for="contact-name" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Full Name <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+<input id="contact-name" name="name" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="text" autocomplete="name" aria-required="true"/>
 </div>
 <div>
-<label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Email Address *</label>
-<input id="email" name="email" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="email"/>
+<label for="contact-email" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Email Address <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+<input id="contact-email" name="email" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="email" autocomplete="email" aria-required="true"/>
 </div>
 <div>
-<label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Phone Number *</label>
-<input id="phone" name="phone" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="tel"/>
+<label for="contact-phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Phone Number <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+<input id="contact-phone" name="phone" required="" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px;" type="tel" autocomplete="tel" inputmode="tel" aria-required="true" placeholder="(555) 555-5555"/>
 </div>
 <div>
 <label for="inquiry-type" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">I'm interested in:</label>
@@ -218,19 +232,20 @@
 </select>
 </div>
 <div>
-<label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Message</label>
-<textarea id="message" name="message" rows="5" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px; resize: vertical;"></textarea>
+<label for="contact-message" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--gray-900);">Message</label>
+<textarea id="contact-message" name="message" rows="5" style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 6px; font-size: 16px; resize: vertical;" aria-describedby="message-help"></textarea>
+<p id="message-help" class="sr-only">Optional. Tell us about your situation or any questions you have.</p>
 </div>
 <div>
 <label style="display: flex; align-items: start; gap: 10px; cursor: pointer;">
-<input name="consent" required="" style="margin-top: 4px;" type="checkbox"/>
-<span style="font-size: 14px; color: var(--gray-700);">I consent to Trust SoCal contacting me via phone, email, or text about treatment options. I understand all communication is confidential and I can opt out at any time.</span>
+<input id="consent-checkbox" name="consent" required="" style="margin-top: 4px; min-width: 20px; min-height: 20px;" type="checkbox" aria-required="true"/>
+<span style="font-size: 14px; color: var(--gray-700);">I consent to Trust SoCal contacting me via phone, email, or text about treatment options. I understand all communication is confidential and I can opt out at any time. <span aria-hidden="true">*</span><span class="sr-only">(required)</span></span>
 </label>
 </div>
-<button style="background: var(--primary-teal); color: white; padding: 16px 32px; border: none; border-radius: 6px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s;" type="submit">
+<button style="background: var(--primary-teal); color: white; padding: 16px 32px; border: none; border-radius: 6px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s;" type="submit" aria-describedby="submit-help">
                         Send Message
                     </button>
-<p style="font-size: 13px; color: var(--gray-600); text-align: center; margin: 0;">Your information is protected by our strict confidentiality policy and HIPAA regulations.</p>
+<p id="submit-help" style="font-size: 13px; color: var(--gray-600); text-align: center; margin: 0;"><span aria-hidden="true">🔒</span> Your information is protected by our strict confidentiality policy and HIPAA regulations.</p>
 </form>
 </div>
 </div>
@@ -323,7 +338,9 @@
 </div>
 </div>
 </section>
-<footer class="footer">
+</main>
+<!-- 🟠 ORANGE AGENT: Closed main landmark and added footer role -->
+<footer class="footer" role="contentinfo">
 <div class="container">
 <div class="footer-content">
 <div class="footer-section">
@@ -334,11 +351,12 @@
 </div>
 <p class="footer-description">Orange County's premier addiction treatment center with 15+ years of experience, 85% success rate, and Joint Commission accreditation.</p>
 <div class="footer-accreditations">
-<span class="accreditation-badge">🏆 Joint Commission Accredited</span>
-<span class="accreditation-badge">⭐ 4.8/5 Rating</span>
+<span class="accreditation-badge"><span aria-hidden="true">🏆</span> Joint Commission Accredited</span>
+<span class="accreditation-badge"><span aria-hidden="true">⭐</span> 4.8/5 Rating</span>
 </div>
 </div>
-<div class="footer-section">
+<!-- 🟠 ORANGE AGENT: Added aria-label to footer navigation sections -->
+<nav class="footer-section" aria-label="Treatment Programs">
 <h4>Treatment Programs</h4>
 <ul>
 <li><a href="services.html#programs">Medical Detox</a></li>
@@ -346,8 +364,8 @@
 <li><a href="services.html#programs">Outpatient Programs</a></li>
 <li><a href="services.html#programs">Holistic Therapies</a></li>
 </ul>
-</div>
-<div class="footer-section">
+</nav>
+<nav class="footer-section" aria-label="Resources">
 <h4>Resources</h4>
 <ul>
 <li><a href="insurance.html">Insurance Verification</a></li>
@@ -355,40 +373,89 @@
 <li><a href="locations.html">Our Locations</a></li>
 <li><a href="success-stories.html">Success Stories</a></li>
 </ul>
-</div>
+</nav>
 <div class="footer-section">
 <h4>Get Help Now</h4>
 <div class="footer-contact">
 <p><strong>24/7 Crisis Support:</strong></p>
-<a class="footer-phone" href="tel:555-123-4567">(555) 123-4567</a>
+<a class="footer-phone" href="tel:555-123-4567" aria-label="Call 24/7 crisis support at 555-123-4567">(555) 123-4567</a>
 <p><strong>Email:</strong></p>
-<a href="mailto:admissions@trustsocal.com">admissions@trustsocal.com</a>
+<a href="mailto:admissions@trustsocal.com" aria-label="Email admissions at admissions@trustsocal.com">admissions@trustsocal.com</a>
 </div>
 </div>
 </div>
 <div class="footer-bottom">
 <div class="footer-legal">
 <p>© 2026 Trust SoCal. All rights reserved.</p>
-<div class="footer-links">
+<nav class="footer-links" aria-label="Legal information">
 <a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms-of-service.html">Terms of Service</a>
 <a href="hipaa-notice.html">HIPAA Notice</a>
-</div>
+</nav>
 </div>
 </div>
 </div>
 </footer>
+<!-- 🟠 ORANGE AGENT: Enhanced JavaScript with accessibility support -->
 <script>
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const nav = document.querySelector('.nav');
-        mobileToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            mobileToggle.classList.toggle('active');
-        });
+
+        // 🟠 ORANGE AGENT: Mobile menu with ARIA state management
+        if (mobileToggle && nav) {
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+
+                // 🟠 ORANGE AGENT: Update ARIA attributes for screen readers
+                mobileToggle.setAttribute('aria-expanded', isOpen);
+                mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            });
+        }
+
+        // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 50) { header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
         });
+
+        // 🟠 ORANGE AGENT: Form validation with accessible error messages
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const requiredFields = contactForm.querySelectorAll('[required]');
+                let hasErrors = false;
+
+                requiredFields.forEach(field => {
+                    // Remove previous error states
+                    field.classList.remove('form-error');
+                    const existingError = field.parentElement.querySelector('.form-error-message');
+                    if (existingError) existingError.remove();
+
+                    if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+                        hasErrors = true;
+                        field.classList.add('form-error');
+                        field.setAttribute('aria-invalid', 'true');
+
+                        // Create accessible error message
+                        const errorMsg = document.createElement('p');
+                        errorMsg.className = 'form-error-message';
+                        errorMsg.setAttribute('role', 'alert');
+                        errorMsg.textContent = 'This field is required';
+                        field.parentElement.appendChild(errorMsg);
+                    } else {
+                        field.setAttribute('aria-invalid', 'false');
+                    }
+                });
+
+                if (hasErrors) {
+                    e.preventDefault();
+                    // Focus first error field
+                    const firstError = contactForm.querySelector('.form-error');
+                    if (firstError) firstError.focus();
+                }
+            });
+        }
     </script>
 </body>
 </html>
